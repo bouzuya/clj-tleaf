@@ -12,7 +12,6 @@
     (let [engine (TemplateEngine.)]
       (.setTemplateResolver engine tr)
       (let [context (Context.)]
-        (.setVariable context "message" "Hello, Thymeleaf!")
         (print (.process engine "src/tleaf/index.html" context))))))
 
 
