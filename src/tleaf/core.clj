@@ -24,7 +24,10 @@
 (defn -main
   [& args]
   (let [engine (create-engine)
-        context (create-context {"variable" "foobarbaz" "datetime" (.toString (Date.))})]
+        context (create-context {"variable" "foobarbaz"
+                                 "datetime" (.toString (Date.))
+                                 "messages" [{"name" "bouzuya" "text" "hello!"}
+                                             {"name" "emanon001" "text" "hello!!"}]})]
     (print (.process engine "index" context))))
 
 
